@@ -1,1 +1,23 @@
+<div>
 <p>restaurantes works!</p>
+
+
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Endereco</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let restaurante of restaurantes" >
+        <th scope="row">1</th>
+        <td>{{restaurante.nome}}</td>
+        <td>{{restaurante.endereco}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>
