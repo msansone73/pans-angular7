@@ -1,7 +1,17 @@
 <div>
-    <div>
-      <div>Nome <input type="text" [(ngModel)] = "restaurante.nome" /> </div>
-      <div>endereco<input type="text" [(ngModel)] = "restaurante.endereco" /></div>
-      <button (click)="onSalvar()" > salvar </button>
-    </div>
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td><input type="text" [(ngModel)] = "restaurante.nome" /></td>
+        </tr>
+        <tr>
+            <td>Endereco</td>
+            <td><input type="text" [(ngModel)] = "restaurante.endereco" /></td>
+        </tr>        
+        <tr>
+            <td></td>
+            <td><button (click)="onSalvar()" > salvar </button>
+            </td>
+        </tr>
+    </table>
 </div>
