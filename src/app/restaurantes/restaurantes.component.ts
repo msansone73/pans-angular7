@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Restaurante from '../restaurante.model'
-import { FormRestaurenteComponent } from '../form-restaurente/form-restaurente.component';
+
 
 
 @Component({
@@ -14,8 +14,8 @@ export class RestaurantesComponent implements OnInit {
   restaurante: Restaurante =new Restaurante()
   showForm: boolean=false
 
-
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
     this.restaurantes=  [

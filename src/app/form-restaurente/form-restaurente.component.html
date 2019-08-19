@@ -2,6 +2,6 @@
     <div>
       <div>Nome <input type="text" [(ngModel)] = "restaurante.nome" /> </div>
       <div>endereco<input type="text" [(ngModel)] = "restaurante.endereco" /></div>
-      <button> salvar </button>
+      <button (click)="onSalvar()" > salvar </button>
     </div>
 </div>
