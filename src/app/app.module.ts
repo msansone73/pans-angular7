@@ -10,6 +10,8 @@ import { VoceComponent } from './voce/voce.component';
 import { PromocaoComponent } from './promocao/promocao.component';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { CardapioComponent } from './cardapio/cardapio.component';
+import { FormsModule } from '@angular/forms';
+import { FormRestaurenteComponent } from './form-restaurente/form-restaurente.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,16 @@ import { CardapioComponent } from './cardapio/cardapio.component';
     VoceComponent,
     PromocaoComponent,
     RestaurantesComponent,
-    CardapioComponent
+    CardapioComponent,
+    FormRestaurenteComponent,
+ 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,  
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

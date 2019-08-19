@@ -1,7 +1,7 @@
 <div>
-<p>restaurantes works!</p>
-
-
+<div>
+  <app-form-restaurente  [hidden]="!showForm" [restaurante]="this.restaurante"></app-form-restaurente>
+</div>
 <table class="table table-striped table-dark">
     <thead>
       <tr>
@@ -15,6 +15,8 @@
         <th scope="row">1</th>
         <td>{{restaurante.nome}}</td>
         <td>{{restaurante.endereco}}</td>
+        <td><button (click)="onEdit(restaurante)" >Edit</button></td>
+
       </tr>
     </tbody>
   </table>

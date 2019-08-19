@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Restaurante from '../restaurante.model'
+import { FormRestaurenteComponent } from '../form-restaurente/form-restaurente.component';
+
 
 @Component({
   selector: 'app-restaurantes',
@@ -8,7 +10,10 @@ import Restaurante from '../restaurante.model'
 })
 export class RestaurantesComponent implements OnInit {
 
-  restaurantes: Restaurante[] = [];
+  restaurantes: Restaurante[] = []
+  restaurante: Restaurante =new Restaurante()
+  showForm: boolean=false
+
 
   constructor() { }
 
@@ -18,7 +23,21 @@ export class RestaurantesComponent implements OnInit {
       { "id": 1, "nome": "pizza hut boa vista" , "endereco": "rua boa vista"},
       { "id": 2, "nome": "pizza hut arraida"   , "endereco": "rua arrabida"}
   ];
-    
+
+  this.restaurante.nome="jose"
+  this.restaurante.endereco="rua"
+  
+  this.showForm =false
+  }
+
+  onEdit(r:Restaurante){
+    this.showForm=true
+    //this.restaurante=r
+    let rest:Restaurante = new Restaurante()
+    rest.nome=r.nome
+    rest.endereco=r.endereco
+    this.restaurante=rest
+
   }
 
 }
